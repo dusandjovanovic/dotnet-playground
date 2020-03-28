@@ -4,9 +4,12 @@ C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody.Data\bin\De
 C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody.Data\bin\Debug\netcoreapp3.1\dotnet-foody.Core.dll
 C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody.Data\bin\Debug\netcoreapp3.1\dotnet-foody.Core.pdb
 C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody.Data\obj\Debug\netcoreapp3.1\dotnet-foody.Data.csprojAssemblyReference.cache
-C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody.Data\obj\Debug\netcoreapp3.1\dotnet-foody.Data.csproj.CoreCompileInputs.cache
 C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody.Data\obj\Debug\netcoreapp3.1\dotnet-foody.Data.AssemblyInfoInputs.cache
 C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody.Data\obj\Debug\netcoreapp3.1\dotnet-foody.Data.AssemblyInfo.cs
 C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody.Data\obj\Debug\netcoreapp3.1\dotnet-foody.Data.csproj.CopyComplete
 C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody.Data\obj\Debug\netcoreapp3.1\dotnet-foody.Data.dll
 C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody.Data\obj\Debug\netcoreapp3.1\dotnet-foody.Data.pdb
+C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody.Data\obj\Debug\netcoreapp3.1\dotnet-foody.Data.csproj.CoreCompileInputs.cache
+C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody.Data\bin\Debug\netcoreapp3.1\dotnet-foody.Data.runtimeconfig.json
+C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody.Data\bin\Debug\netcoreapp3.1\dotnet-foody.Data.runtimeconfig.dev.json
+C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody.Data\obj\Debug\netcoreapp3.1\dotnet-foody.Data.genruntimeconfig.cache

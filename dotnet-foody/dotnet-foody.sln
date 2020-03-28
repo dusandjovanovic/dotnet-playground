@@ -5,9 +5,15 @@ VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnet-foody", "dotnet-foody.csproj", "{D05CF81D-974D-436C-8E28-0F75EE4BFD1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet-foody.Core", "..\dotnet-foody.Core\dotnet-foody.Core.csproj", "{F9678979-64CD-49E5-88B1-0A643DA64D0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnet-foody.Core", "..\dotnet-foody.Core\dotnet-foody.Core.csproj", "{F9678979-64CD-49E5-88B1-0A643DA64D0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet-foody.Data", "..\dotnet-foody.Data\dotnet-foody.Data.csproj", "{3B923F16-0917-4A80-9111-B46D7B1FF910}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnet-foody.Data", "..\dotnet-foody.Data\dotnet-foody.Data.csproj", "{3B923F16-0917-4A80-9111-B46D7B1FF910}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F32DC9CF-578F-4512-A0E1-43266BFA48A2}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		unnamed.png = unnamed.png
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

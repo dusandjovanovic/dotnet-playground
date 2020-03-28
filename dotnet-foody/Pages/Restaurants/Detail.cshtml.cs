@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using dotnet_foody.Core;
+﻿using dotnet_foody.Core;
 using dotnet_foody.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -12,6 +8,9 @@ namespace dotnet_foody.Pages.Restaurants
     public class DetailModel : PageModel
     {
         private readonly IRestaurantData restaurantData;
+
+        [TempData]
+        public string Message { get; set; }
 
         public Restaurant Restaurant { get; set; }
 

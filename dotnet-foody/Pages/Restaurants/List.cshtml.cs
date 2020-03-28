@@ -1,21 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using dotnet_foody.Core;
+﻿using dotnet_foody.Core;
 using dotnet_foody.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Configuration;
+using System.Collections.Generic;
 
 namespace dotnet_foody.Pages.Restaurants
 {
     public class ListModel : PageModel
     {
         private readonly IConfiguration config;
+
         private readonly IRestaurantData restaurantData;
+
+        public string MessageEnv { get; set; }
+
+        [TempData]
         public string Message { get; set; }
+
         public IEnumerable<Restaurant> Restaurants { get; set; }
+
         [BindProperty(SupportsGet = true)]
         public string SearchTerm { get; set; }
 
@@ -27,7 +31,7 @@ namespace dotnet_foody.Pages.Restaurants
 
         public void OnGet(string searchTerm)
         {
-            Message = config["Message"];
+            MessageEnv = config["Message"];
             Restaurants = restaurantData.GetRestaurantsByName(SearchTerm);
         }
     }

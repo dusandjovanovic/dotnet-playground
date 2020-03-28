@@ -4,16 +4,6 @@
     ViewData["Title"] = "List";
 }
 
-<!-- CSS -->
-<environment include="Development">
-    <script src="~/lib/font-awesome/css/fontawesome.css"></script>
-</environment>
-
-<!-- JS -->
-<environment include="Development">
-    <script src="~/lib/font-awesome/js/fontawesome.js"></script>
-</environment>
-
 <h1>Restaurants</h1>
 
 <form method="get">
@@ -22,31 +12,25 @@
             <input type="search" class="form-control" asp-for="SearchTerm" />
             <div class="input-group-append">
                 <button class="btn btn-secondary">
-                    <!-- <i class="fas fa-search"></i> -->
-                    Search
+                    <i class="fas fa-search">Search</i>
                 </button>
             </div>
         </div>
     </div>
 </form>
 
-<table class="table">
-    @foreach (var restaurant in Model.Restaurants)
-    {
-        <tr>
-            <td>@restaurant.Name</td>
-            <td>@restaurant.Location</td>
-            <td>@restaurant.Cuisine</td>
-            <td>
-                <a class="btn btn-secondary"
-                   asp-page="./Detail"
-                   asp-route-restaurantId="@restaurant.Id"
-                   >
-                    Details
-                </a> 
-            </td>
-        </tr>
-    }
-</table>
+@foreach (var restaurant in Model.Restaurants)
+{
+    <partial name="_Summary" model="restaurant" />
+}
 
-<div>@Model.Message</div>
+<a class="btn btn-info mt-4" asp-page="./Edit">
+    Add new
+</a>
+
+@if (Model.Message != null)
+{
+    <div class="alert alert-warning">
+        @Model.Message
+    </div>
+}
