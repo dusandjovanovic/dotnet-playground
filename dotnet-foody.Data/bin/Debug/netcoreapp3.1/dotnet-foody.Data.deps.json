@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "dotnet-foody.Data/1.0.0": {
+        "dependencies": {
+          "dotnet-foody.Core": "1.0.0"
+        },
+        "runtime": {
+          "dotnet-foody.Data.dll": {}
+        }
+      },
+      "dotnet-foody.Core/1.0.0": {
+        "runtime": {
+          "dotnet-foody.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "dotnet-foody.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "dotnet-foody.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

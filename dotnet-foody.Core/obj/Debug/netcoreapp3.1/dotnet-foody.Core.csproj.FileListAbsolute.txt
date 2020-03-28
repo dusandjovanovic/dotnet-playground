@@ -1,0 +1,9 @@
+C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody.Core\bin\Debug\netcoreapp3.1\dotnet-foody.Core.deps.json
+C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody.Core\bin\Debug\netcoreapp3.1\dotnet-foody.Core.dll
+C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody.Core\bin\Debug\netcoreapp3.1\dotnet-foody.Core.pdb
+C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody.Core\obj\Debug\netcoreapp3.1\dotnet-foody.Core.csprojAssemblyReference.cache
+C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody.Core\obj\Debug\netcoreapp3.1\dotnet-foody.Core.csproj.CoreCompileInputs.cache
+C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody.Core\obj\Debug\netcoreapp3.1\dotnet-foody.Core.AssemblyInfoInputs.cache
+C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody.Core\obj\Debug\netcoreapp3.1\dotnet-foody.Core.AssemblyInfo.cs
+C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody.Core\obj\Debug\netcoreapp3.1\dotnet-foody.Core.dll
+C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody.Core\obj\Debug\netcoreapp3.1\dotnet-foody.Core.pdb
