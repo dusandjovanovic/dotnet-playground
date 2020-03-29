@@ -6,10 +6,16 @@
 
 <h1>Client</h1>
 
+<table class="table" id="restaurants">
+
+</table>
+
 @section Scripts
 {
     <environment include="Development">
-        
+        <script src="~\node_modules\datatables.net\js\jquery.dataTables.js"></script>
+        <script src="~\node_modules\datatables.net-bs4\js\dataTables.bootstrap4.js"></script> 
+        <link href="~\node_modules\datatables.net-bs4\css\dataTables.bootstrap4.css" rel="stylesheet" />
     </environment>
 
     <environment exclude="Development">
@@ -22,7 +28,14 @@
             $.ajax("/api/restaurants/", {
                 method: "get"
             }).then(function (response) {
-                console.log(response);
+                $("#restaurants").dataTable({
+                    data: response,
+                    columns: [
+                        { "data": "name" },
+                        { "data": "location" },
+                        { "data": "cuisine" }
+                    ]
+                });
             });
         })
     </script>

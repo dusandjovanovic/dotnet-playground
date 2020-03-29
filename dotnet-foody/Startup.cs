@@ -1,10 +1,12 @@
 using dotnet_foody.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 
 namespace dotnet_foody
 {
@@ -43,8 +45,11 @@ namespace dotnet_foody
                 app.UseHsts();
             }
 
+            app.Use(SayHelloMiddleware);
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseNodeModules();
 
             app.UseRouting();
 
@@ -55,6 +60,17 @@ namespace dotnet_foody
                 endpoints.MapRazorPages();
                 endpoints.MapControllers();
             });
+        }
+
+        private RequestDelegate SayHelloMiddleware(RequestDelegate nextMiddleware)
+        {
+            return async ctx =>
+            {
+                if (ctx.Request.Path.StartsWithSegments("/hello"))
+                    await ctx.Response.WriteAsync("Hello from Middleware.");
+                else
+                    await nextMiddleware(ctx);
+            };
         }
     }
 }

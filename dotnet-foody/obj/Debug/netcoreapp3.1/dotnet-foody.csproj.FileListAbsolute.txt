@@ -169,11 +169,14 @@ C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\bin\Debug\n
 C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
-C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\obj\Debug\netcoreapp3.1\dotnet-foody.csproj.CoreCompileInputs.cache
-C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\obj\Debug\netcoreapp3.1\dotnet-foody.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\obj\Debug\netcoreapp3.1\Razor\R2\Create.cshtml.g.cs
 C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\obj\Debug\netcoreapp3.1\Razor\R2\Delete.cshtml.g.cs
 C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\obj\Debug\netcoreapp3.1\Razor\R2\Details.cshtml.g.cs
 C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\obj\Debug\netcoreapp3.1\Razor\R2\Edit.cshtml.g.cs
 C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\obj\Debug\netcoreapp3.1\Razor\R2\Index.cshtml.g.cs
 C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\obj\Debug\netcoreapp3.1\Razor\Pages\Restaurants\Client.cshtml.g.cs
+C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\bin\Debug\netcoreapp3.1\package-lock.json
+C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\bin\Debug\netcoreapp3.1\package.json
+C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\bin\Debug\netcoreapp3.1\OdeToCode.UseNodeModules.dll
+C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\obj\Debug\netcoreapp3.1\dotnet-foody.csproj.CoreCompileInputs.cache
+C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\obj\Debug\netcoreapp3.1\dotnet-foody.MvcApplicationPartsAssemblyInfo.cache
