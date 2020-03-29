@@ -341,3 +341,6 @@ healthchecksdb
 
 # Node modules
 node_modules/
+
+# Production builds
+build/

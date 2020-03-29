@@ -180,3 +180,16 @@ C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\bin\Debug\n
 C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\bin\Debug\netcoreapp3.1\OdeToCode.UseNodeModules.dll
 C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\obj\Debug\netcoreapp3.1\dotnet-foody.csproj.CoreCompileInputs.cache
 C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\obj\Debug\netcoreapp3.1\dotnet-foody.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\bin\Debug\netcoreapp3.1\build\web.config
+C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\bin\Debug\netcoreapp3.1\build\appsettings.Development.json
+C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\bin\Debug\netcoreapp3.1\build\appsettings.json
+C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\bin\Debug\netcoreapp3.1\build\dotnet-foody.Core.deps.json
+C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\bin\Debug\netcoreapp3.1\build\dotnet-foody.Data.deps.json
+C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\bin\Debug\netcoreapp3.1\build\dotnet-foody.Data.runtimeconfig.json
+C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\bin\Debug\netcoreapp3.1\build\dotnet-foody.deps.json
+C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\bin\Debug\netcoreapp3.1\build\dotnet-foody.runtimeconfig.json
+C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\bin\Debug\netcoreapp3.1\build\libman.json
+C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\bin\Debug\netcoreapp3.1\build\package-lock.json
+C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\bin\Debug\netcoreapp3.1\build\package.json
+C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\bin\Debug\netcoreapp3.1\appsettings.Production.Development.json
+C:\Users\Dusan\Documents\Repositories\dotnet-playground\dotnet-foody\bin\Debug\netcoreapp3.1\appsettings.Production.json
