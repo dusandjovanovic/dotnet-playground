@@ -30,6 +30,7 @@ namespace dotnet_pie
             );
             services.AddScoped<IPieRepository, PieRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
             services.AddScoped<ShoppingCart>(provider => ShoppingCart.GetCart(provider));
             services.AddHttpContextAccessor();
             services.AddControllersWithViews();
