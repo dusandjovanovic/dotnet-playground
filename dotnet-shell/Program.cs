@@ -2,23 +2,16 @@
 
 namespace dotnet_shell
 {
-    public class Point
-    {
-        public int x, y;
-    }
-
-    public struct CPoint
-    {
-        public int x, y;
-    }
-
     class Program
     {
         static void Main(string[] args)
         {
-            int x = 1;
+            string valueA = "FirstValue";
+            string valueB = valueA;
+            valueA = "AnotherValue";
 
-            Console.WriteLine($"Hello there {x}");
+            Console.WriteLine(valueA);
+            Console.WriteLine(valueB);
         }
     }
 }
