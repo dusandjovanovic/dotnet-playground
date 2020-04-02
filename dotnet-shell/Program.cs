@@ -1,17 +1,18 @@
 ﻿using System;
+using System.Text;
 
 namespace dotnet_shell
 {
     class Program
     {
+        static string x = "old";
+
+        static ref string GetX() => ref x; 
+
         static void Main(string[] args)
         {
-            string valueA = "FirstValue";
-            string valueB = valueA;
-            valueA = "AnotherValue";
-
-            Console.WriteLine(valueA);
-            Console.WriteLine(valueB);
+            int x, y, z = 11;
+            x = y = z = 11;
         }
     }
 }
