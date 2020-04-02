@@ -2,25 +2,23 @@
 
 namespace dotnet_shell
 {
+    public class Point
+    {
+        public int x, y;
+    }
+
+    public struct CPoint
+    {
+        public int x, y;
+    }
+
     class Program
     {
         static void Main(string[] args)
         {
-            int x = FeetToInches(10);
-            System.Console.WriteLine(x);
+            int x = 1;
 
-            string message = "Hello world!";
-            string upperMessage = x.ToString() + " " + message.ToUpper();
-            Console.WriteLine(upperMessage);
-
-            bool lessThan120 = x < 120;
-            Console.WriteLine(lessThan120);
-        }
-
-        static int FeetToInches(int feet)
-        {
-            int @inches = feet * 12;
-            return inches;
+            Console.WriteLine($"Hello there {x}");
         }
     }
 }
