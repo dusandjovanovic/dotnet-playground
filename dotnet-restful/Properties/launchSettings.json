@@ -4,14 +4,14 @@
     "anonymousAuthentication": true,
     "iisExpress": {
       "applicationUrl": "http://localhost:6600",
-      "sslPort": 44369
+      "sslPort": 0
     }
   },
   "$schema": "http://json.schemastore.org/launchsettings.json",
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
-      "launchUrl": "weatherforecast",
+      "launchUrl": "/api/camps",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

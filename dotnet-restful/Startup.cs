@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using dotnet_restful.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -30,6 +31,7 @@ namespace dotnet_restful
             services.AddDbContext<CampContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
             );
+            services.AddAutoMapper(typeof(Startup));
             services.AddScoped<ICampRepository, CampRepository>();
             services.AddControllers();
         }
