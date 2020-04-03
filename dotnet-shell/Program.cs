@@ -5,14 +5,14 @@ namespace dotnet_shell
 {
     class Program
     {
-        static string x = "old";
-
-        static ref string GetX() => ref x; 
-
         static void Main(string[] args)
         {
-            int x, y, z = 11;
-            x = y = z = 11;
+            string s = null;
+            string nullable = s ?? "something";
+
+            StringBuilder builder = null;
+            nullable = builder?.ToString();
+            int? nullableInt = nullable?.Length;
         }
     }
 }
