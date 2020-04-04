@@ -7,12 +7,44 @@ namespace dotnet_shell
     {
         static void Main(string[] args)
         {
-            string s = null;
-            string nullable = s ?? "something";
+            Stock stock = new Stock()
+            {
+                Name = "Stock",
+                Shares = 122L
+            };
 
-            StringBuilder builder = null;
-            nullable = builder?.ToString();
-            int? nullableInt = nullable?.Length;
+            House house = new House()
+            {
+                Name = "House",
+                Montage = 122M
+            };
+
+            Asset asset = stock;
+
+            if (asset is Stock s && s.Shares > 100)
+            {
+                Console.WriteLine(s.Shares);
+            }
         }
+    }
+
+    public class Asset
+    {
+        public string Name;
+
+        public static void Display(Asset asset)
+        {
+            Console.WriteLine(asset.Name);
+        }
+    }
+
+    public class Stock : Asset
+    {
+        public long Shares;
+    }
+
+    public class House : Asset
+    {
+        public decimal Montage;
     }
 }
