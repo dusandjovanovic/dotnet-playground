@@ -4,9 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using dotnet_restful.Data;
+using dotnet_restful.Data.Entities;
 using dotnet_restful.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Routing;
 
 namespace dotnet_restful.Controllers
 {
@@ -16,11 +18,13 @@ namespace dotnet_restful.Controllers
     {
         private readonly ICampRepository _repository;
         private readonly IMapper _mapper;
+        private readonly LinkGenerator _linkGenerator;
 
-        public CampsController(ICampRepository repository, IMapper mapper)
+        public CampsController(ICampRepository repository, IMapper mapper, LinkGenerator linkGenerator)
         {
             _repository = repository;
             _mapper = mapper;
+            _linkGenerator = linkGenerator;
         }
 
         [HttpGet]
@@ -69,6 +73,94 @@ namespace dotnet_restful.Controllers
             {
                 return this.StatusCode(StatusCodes.Status500InternalServerError, e.ToString());
             }
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<CampModel>> Post([FromBody]CampModel model)
+        {
+            try
+            {
+                var existing = await _repository.GetCampAsync(model.Moniker);
+                if (existing != null)
+                {
+                    return BadRequest("Could not use this moniker.");
+                }
+
+                var location = _linkGenerator.GetPathByAction(
+                    "Get", 
+                    "Camps", 
+                    new { moniker = model.Moniker }
+                );
+                if (string.IsNullOrWhiteSpace(location))
+                    return BadRequest("Could not use this moniker.");
+
+                var camp = _mapper.Map<Camp>(model);
+                _repository.Add(camp);
+                if (await _repository.SaveChangesAsync())
+                {
+                    return Created(location, _mapper.Map<CampModel>(camp));
+                }
+            }
+            catch (Exception e)
+            {
+
+                return this.StatusCode(StatusCodes.Status500InternalServerError, e.ToString());
+            }
+
+            return BadRequest();
+        }
+
+        [HttpPut("{moniker}")]
+        public async Task<ActionResult<CampModel>> Put(string moniker, CampModel model)
+        {
+            try
+            {
+                var oldCamp = await _repository.GetCampAsync(moniker);
+                if (oldCamp == null)
+                    return NotFound($"Could not find with moniker {moniker}");
+
+                _mapper.Map(model, oldCamp);
+
+                if (await _repository.SaveChangesAsync())
+                {
+                    return _mapper.Map<CampModel>(oldCamp);
+                }
+            }
+            catch (Exception e)
+            {
+
+                return this.StatusCode(StatusCodes.Status500InternalServerError, e.ToString());
+            }
+
+            return BadRequest();
+        }
+
+        [HttpDelete("{moniker}")]
+        public async Task<IActionResult> Delete(string moniker)
+        {
+            try
+            {
+                var oldCamp = await _repository.GetCampAsync(moniker, true);
+                if (oldCamp == null)
+                    return NotFound($"Could not find with moniker {moniker}");
+
+                if (oldCamp.Talks != null)
+                    foreach (Talk talk in oldCamp.Talks)
+                        _repository.Delete(talk);
+                _repository.Delete(oldCamp);
+
+                if (await _repository.SaveChangesAsync())
+                {
+                    return Ok();
+                }
+            }
+            catch (Exception e)
+            {
+
+                return this.StatusCode(StatusCodes.Status500InternalServerError, e.ToString());
+            }
+
+            return BadRequest();
         }
     }
 }
