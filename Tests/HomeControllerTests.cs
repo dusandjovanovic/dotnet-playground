@@ -1,6 +1,9 @@
 using dotnet_dependency_injection.Controllers;
+using dotnet_dependency_injection.Services;
 using dotnet_dependency_injection.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Moq;
+using System;
 using Xunit;
 
 namespace Tests
@@ -10,7 +13,14 @@ namespace Tests
         [Fact]
         public void ReturnsExpectedViewModel_WhenWeatherIsSun()
         {
-            var sut = new HomeController();
+            var mockWeatherForecaster = new Mock<IWeatherForecaster>();
+            mockWeatherForecaster.Setup(w => w.GetCurrentWeather()).Returns(
+                new WeatherResult
+                {
+                    WeatherCondition = WeatherCondition.Sun
+                });
+
+            var sut = new HomeController(mockWeatherForecaster.Object);
 
             var result = sut.Index();
 
@@ -22,7 +32,14 @@ namespace Tests
         [Fact]
         public void ReturnsExpectedViewModel_WhenWeatherIsRain()
         {
-            var sut = new HomeController();
+            var mockWeatherForecaster = new Mock<IWeatherForecaster>();
+            mockWeatherForecaster.Setup(w => w.GetCurrentWeather()).Returns(
+                new WeatherResult
+                {
+                    WeatherCondition = WeatherCondition.Rain
+                });
+
+            var sut = new HomeController(mockWeatherForecaster.Object);
 
             var result = sut.Index();
 

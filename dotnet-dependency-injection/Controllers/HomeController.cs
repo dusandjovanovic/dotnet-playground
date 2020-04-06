@@ -13,11 +13,17 @@ namespace dotnet_dependency_injection.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IWeatherForecaster _weatherForecaster;
+
+        public HomeController(IWeatherForecaster weatherForecaster)
+        {
+            _weatherForecaster = weatherForecaster;
+        }
+
         public IActionResult Index()
         {
-            var viewModel = new HomeViewModel();
-            var weatherForecaster = new WeatherForecaster();
-            var currentWeather = weatherForecaster.GetCurrentWeather();
+            var viewModel = new HomeViewModel();           
+            var currentWeather = _weatherForecaster.GetCurrentWeather();
 
             switch (currentWeather.WeatherCondition)
             {

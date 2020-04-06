@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace dotnet_dependency_injection.Services
 {
-    public class WeatherForecaster
+    public class WeatherForecaster : IWeatherForecaster
     {
         public WeatherResult GetCurrentWeather()
         {
