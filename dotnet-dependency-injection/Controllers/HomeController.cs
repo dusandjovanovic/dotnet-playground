@@ -1,0 +1,59 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using dotnet_dependency_injection.Models;
+using dotnet_dependency_injection.ViewModels;
+using dotnet_dependency_injection.Services;
+
+namespace dotnet_dependency_injection.Controllers
+{
+    public class HomeController : Controller
+    {
+        private readonly ILogger<HomeController> _logger;
+
+        public HomeController(ILogger<HomeController> logger)
+        {
+            _logger = logger;
+        }
+
+        public IActionResult Index()
+        {
+            var viewModel = new HomeViewModel();
+            var weatherForecaster = new WeatherForecaster();
+            var currentWeather = weatherForecaster.GetCurrentWeather();
+
+            switch (currentWeather.WeatherCondition)
+            {
+                case WeatherCondition.Sun:
+                    viewModel.WeatherDescription = "It's sunny right now. " +
+                                                   "A great day for tennis.";
+                    break;
+                case WeatherCondition.Rain:
+                    viewModel.WeatherDescription = "We're sorry but it's raining " +
+                                                   "here. No outdoor courts in use.";
+                    break;
+                default:
+                    viewModel.WeatherDescription = "We don't have the latest weather " +
+                                                   "information right now, please check again later.";
+                    break;
+            }
+
+            return View(viewModel);
+        }
+
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+    }
+}
