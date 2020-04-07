@@ -20,7 +20,10 @@ namespace Tests
                     WeatherCondition = WeatherCondition.Sun
                 });
 
-            var sut = new HomeController(mockWeatherForecaster.Object);
+            var mockGuid = new Mock<GuidService>();
+            mockGuid.Setup(w => w.GetGuid()).Returns(new Guid().ToString());
+
+            var sut = new HomeController(mockWeatherForecaster.Object, mockGuid.Object, null);
 
             var result = sut.Index();
 
@@ -39,7 +42,10 @@ namespace Tests
                     WeatherCondition = WeatherCondition.Rain
                 });
 
-            var sut = new HomeController(mockWeatherForecaster.Object);
+            var mockGuid = new Mock<GuidService>();
+            mockGuid.Setup(w => w.GetGuid()).Returns(new Guid().ToString());
+
+            var sut = new HomeController(mockWeatherForecaster.Object, mockGuid.Object, null);
 
             var result = sut.Index();
 

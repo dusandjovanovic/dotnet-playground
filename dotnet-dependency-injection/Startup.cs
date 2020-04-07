@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using dotnet_dependency_injection.Configuration;
+using dotnet_dependency_injection.Middlewares;
 using dotnet_dependency_injection.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -25,7 +27,11 @@ namespace dotnet_dependency_injection
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
             services.AddTransient<IWeatherForecaster, AmazingWeatherForecaster>();
+            services.AddSingleton<GuidService>();
+
+            services.Configure<FeaturesConfiguration>(Configuration.GetSection("Features"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,6 +47,8 @@ namespace dotnet_dependency_injection
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            app.UseMiddleware<CustomMiddleware>();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
