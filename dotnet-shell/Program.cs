@@ -7,44 +7,20 @@ namespace dotnet_shell
     {
         static void Main(string[] args)
         {
-            Stock stock = new Stock()
-            {
-                Name = "Stock",
-                Shares = 122L
-            };
-
-            House house = new House()
-            {
-                Name = "House",
-                Montage = 122M
-            };
-
-            Asset asset = stock;
-
-            if (asset is Stock s && s.Shares > 100)
-            {
-                Console.WriteLine(s.Shares);
-            }
+            Point p = new Point();
+            Console.WriteLine(p.ToString());
         }
     }
 
-    public class Asset
+    public class Point
     {
-        public string Name;
+        public int X;
 
-        public static void Display(Asset asset)
+        public string y;
+
+        public override string ToString()
         {
-            Console.WriteLine(asset.Name);
+            return "is a overriden-method point!";
         }
-    }
-
-    public class Stock : Asset
-    {
-        public long Shares;
-    }
-
-    public class House : Asset
-    {
-        public decimal Montage;
     }
 }
