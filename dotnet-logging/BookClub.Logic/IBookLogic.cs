@@ -6,6 +6,6 @@ namespace BookClub.Logic
 {
     public interface IBookLogic
     {
-        Task<List<BookModel>> GetAllBooks(bool callBadMethod = false);        
+        Task<List<BookModel>> GetAllBooks();
     }
 }
