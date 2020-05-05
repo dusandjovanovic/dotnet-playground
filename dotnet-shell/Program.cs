@@ -3,24 +3,14 @@ using System.Text;
 
 namespace dotnet_shell
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Point p = new Point();
-            Console.WriteLine(p.ToString());
-        }
-    }
+            var unnamedTuple = ("hello", "there");
+            var namedTuple = (first: "hello", second: "there");
 
-    public class Point
-    {
-        public int X;
-
-        public string y;
-
-        public override string ToString()
-        {
-            return "is a overriden-method point!";
+            (string first, string second)? nullableTuple = namedTuple;
         }
     }
 }
